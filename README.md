@@ -1,68 +1,107 @@
 # Data Structures and Algorithms
 
-A repository containing implementations of common data structures and algorithms in various programming languages. Each data structure and algorithm has its own folder with the implementation and explanations.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/vitorparras/Data-Structures-and-Algorithms/badge)](https://scorecard.dev/viewer/?uri=github.com/vitorparras/Data-Structures-and-Algorithms)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-## Table of Contents
+Implementations and explanations of classic data structures and algorithms,
+organized by topic, for study and quick reference.
 
-- [Introduction](#introduction)
-- [Folder Structure](#folder-structure)
-- [Data Structures](#data-structures)
-- [Algorithms](#algorithms)
-- [How to Use](#how-to-use)
+> **Status:** starting. The repository structure and conventions are defined
+> below; implementations are added over time. Contributions are welcome from
+> day one.
+
+## Table of contents
+
+- [Goal](#goal)
+- [Planned structure](#planned-structure)
+- [Conventions](#conventions)
+- [How to use it](#how-to-use-it)
 - [Contributing](#contributing)
+- [Security](#security)
+- [Code of conduct](#code-of-conduct)
+- [License](#license)
 
-## Introduction
+## Goal
 
-This repository aims to provide a comprehensive collection of data structures and algorithms implemented in various programming languages. It is intended for educational purposes and to serve as a reference for anyone learning or revising these fundamental concepts.
+To be a place where each fundamental data structure and algorithm has:
 
-## Folder Structure
+- a short explanation of the idea and when to use it;
+- a clean, commented implementation;
+- its time and space complexity;
+- small tests or examples that show it working.
 
-The repository is structured as follows:
+Python is the first language; other languages are welcome side by side, in the
+same folder, as long as they follow the conventions below.
 
+## Planned structure
+
+```text
+Data-Structures-and-Algorithms/
+├── data-structures/
+│   ├── arrays/
+│   ├── linked-lists/          # singly, doubly, circular
+│   ├── stacks-and-queues/
+│   ├── hash-tables/
+│   ├── trees/                 # binary, BST, AVL, heaps, tries
+│   └── graphs/                # representations, BFS, DFS
+├── algorithms/
+│   ├── sorting/               # bubble, insertion, merge, quick, heap, counting
+│   ├── searching/             # linear, binary, interpolation
+│   ├── recursion-and-backtracking/
+│   ├── dynamic-programming/
+│   ├── greedy/
+│   └── graph-algorithms/      # Dijkstra, Bellman-Ford, Kruskal, Prim, topological sort
+└── README.md
 ```
 
-  Data-Structures-and-Algorithms/
-  ├── Arrays/
-  │   ├── array_example.py
-  │   └── README.md
-  ├── LinkedLists/
-  │   ├── linked_list_example.py
-  │   └── README.md
-  ├── Trees/
-  │   ├── binary_tree_example.py
-  │   └── README.md
-  ├── Sorting/
-  │   ├── quicksort.py
-  │   ├── mergesort.py
-  │   └── README.md
-  ├── Graphs/
-  │   ├── graph_example.py
-  │   └── README.md
-  └── README.md
+Each leaf folder contains a `README.md` with the explanation and complexity
+table, one implementation file per language (for example `linked_list.py`), and
+a test file (for example `test_linked_list.py`).
 
-```
+## Conventions
 
-Each folder contains implementations and explanations related to a specific data structure or algorithm.
+- **Folder names** in lowercase with hyphens; **file names** follow the
+  language convention (snake_case for Python, PascalCase for C#).
+- **Every README** has: problem, idea, step-by-step example, complexity
+  (best, average, worst) and references.
+- **Code is readable before it is clever.** Comments explain decisions, not
+  syntax.
+- **Tests run with the standard toolchain** of the language (for Python,
+  `python -m pytest` or `python -m unittest`). State the version used.
+- **No external dependencies** unless the topic requires them.
 
-## Data Structures
+## How to use it
 
-- **Arrays**: Basic operations on arrays, including traversal, insertion, and deletion.
-- **LinkedLists**: Implementations of singly linked lists, doubly linked lists, and circular linked lists.
-- **Trees**: Binary trees, binary search trees, AVL trees, and more.
-- **Graphs**: Representations and traversals (DFS, BFS) of graphs.
+1. Browse to the topic you want.
+2. Read the `README.md` for the concept and its complexity.
+3. Open the implementation and the tests, and run them:
 
-## Algorithms
-
-- **Sorting**: Implementations of sorting algorithms like quicksort, mergesort, bubblesort, etc.
-- **Search**: Binary search, linear search, and other search algorithms.
-
-## How to Use
-
-1. Navigate to the folder of the desired data structure or algorithm.
-2. Open the `README.md` file for an explanation of the concept.
-3. Review the implementation file (e.g., `array_example.py`) for the code.
-4. Run the code using your preferred Python interpreter or IDE.
+   ```bash
+   git clone https://github.com/vitorparras/Data-Structures-and-Algorithms.git
+   cd Data-Structures-and-Algorithms
+   python -m pytest   # once tests exist
+   ```
 
 ## Contributing
 
-If you would like to contribute to this repository, please fork the repository, create a new branch, make your changes, and submit a pull request. Contributions are welcome and appreciated! Make sure to follow the coding style and include comments and documentation where necessary.
+New implementations, better explanations and corrections are welcome. Please
+read [CONTRIBUTING.md](CONTRIBUTING.md) first. Open a
+[suggestion](https://github.com/vitorparras/Data-Structures-and-Algorithms/issues/new?template=content_suggestion.yml)
+before writing a large piece so we can agree on scope. The `main` branch is
+protected and only receives changes through reviewed pull requests.
+
+## Security
+
+Found a problem in this repository's code or configuration? Follow
+[SECURITY.md](SECURITY.md) and report it privately.
+
+## Code of conduct
+
+This project follows the [Contributor Covenant](CODE_OF_CONDUCT.md). By
+participating you agree to uphold it.
+
+## License
+
+Licensed under the [MIT License](LICENSE). Copyright © Vitor Hugo Parras.
